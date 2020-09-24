@@ -2,14 +2,8 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
-using std::cout;
 
-int main(){
-    vector<int> arr = {1,3,2,7,8,1,4,6,2,36,6,5};
-    cout<<"input array: \n";
-    for(auto item:arr){
-        cout<<item<<",";
-    }
+vector<int> selection_sort(vector<int> arr, int size){
     for (int i =0;i<arr.size();i++){
         int min_index = i;
         for(int j= i+1;j<arr.size();j++){
@@ -19,10 +13,5 @@ int main(){
         if(i != min_index)  
             swap(arr[i], arr[min_index]);        
     }
-    cout<<"\n \nsorted array"<<"\n";
-    for(auto item:arr){
-        cout<<item<<",";
-    }
-    cout<<"\n";
-    return 0;
+    return arr;
 }
