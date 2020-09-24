@@ -13,7 +13,7 @@ int main(){
         temp.push_back(pow(A[i],2));
     }
     sort(temp.begin(), temp.end());
-    cout<<"sorted array with squares: \n"
+    cout<<"sorted array with squares: \n";
     for(auto item: temp){
         cout<<item<<"\n";
     }
