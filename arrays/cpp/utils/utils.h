@@ -4,6 +4,7 @@ using namespace std;
 
 int min(int x, int y);
 int max(int x, int y);
+int second_min(vector<int> arr);
 void swap(int *a, int *b);
 void print_int_arr(vector<int> arr);
 vector<int> insertion_sort(vector<int> arr, int size);
