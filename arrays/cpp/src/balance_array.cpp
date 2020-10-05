@@ -2,6 +2,14 @@
 #include<vector>
 using namespace std;
 
+/*-----Problem Description-----
+
+Given an integer array A of size N.
+You need to count the number of special elements in the given array.
+A element is special if removal of that element make the array balanced.
+Array will be balanced if sum of even index element equal to sum of odd index element.
+*/
+
 int main() 
 {
     vector<int> A= {1,2,2,3,2};
