@@ -1,0 +1,1 @@
+//Write a C++ program to find and print all common elements in three sorted arrays of integers.

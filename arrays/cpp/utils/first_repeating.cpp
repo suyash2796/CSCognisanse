@@ -1,0 +1,1 @@
+//Write a C++ program to find the first repeating element in an array of integers.

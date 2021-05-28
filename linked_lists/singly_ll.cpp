@@ -11,9 +11,10 @@ struct Node
 
 bool isListEmpty(Node *head);
 void addFirstElement(Node *&head, Node *&last, int value);
-void insert(Node *&head, Node *&last, int value);
+void insert_at_beginning(Node *&head, Node *&last, int value);
 void remove(Node *&head, Node *&last);
 void display(Node *curr);
+void insert_at_pos(Node *&head, Node *&last, int pos, int value);
 
 //checks if list is empty i.e head==NULL
 bool isListEmpty(Node *head){
@@ -33,7 +34,7 @@ void addFirstElement(Node *&head, Node *&last, int value){
 //checks if list is empty.
 //if yes, then add first element
 //if No, then add element in LL
-void insert(Node *&head, Node *&last, int value){
+void insert_at_beginning(Node *&head, Node *&last, int value){
     if(isListEmpty(head))
         addFirstElement(head, last, value);
     else{
@@ -74,6 +75,24 @@ void display(Node *curr){
     }
 }
 
+void insert_at_pos(Node *&head, Node *&last, int pos, int value){
+    if(isListEmpty(head)){
+        cout<<"linked list is empty\n adding first element\n";
+        addFirstElement(head, last, value);
+    }
+    else{
+        Node *temp =  head;
+        Node *new_node = new Node();
+        new_node->value =value;
+        while(pos!=0){
+            temp = temp->next;
+            pos=pos-1;
+        }    
+        new_node->next = temp->next;
+        temp->next = new_node;
+    }
+}
+
 //Main function
 int main(){
 
@@ -85,10 +104,14 @@ int main(){
     int num3=4;
     int num4=5;
 
-    insert(head, last, num1);
-    insert(head, last, num2);
-    insert(head, last, num3);
-    insert(head, last, num4);
+    insert_at_beginning(head, last, num1);
+    insert_at_beginning(head, last, num2);
+    insert_at_beginning(head, last, num3);
+    insert_at_beginning(head, last, num4);
+    
+
+   
+    insert_at_pos(head,last,3,15);
 
     display(head);
 
@@ -99,7 +122,6 @@ int main(){
     display(head);
 
     //TODO
-    //Add element in middle
     //Remove element from middle
     //remove last element
 
