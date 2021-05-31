@@ -8,3 +8,7 @@ The simple idea of Kadane’s algorithm is below:
 1) look for all positive contiguous segments of the array.
 2) keep track of maximum sum contiguous segment among all positive segments.
 3) Each time we get a positive-sum compare it with current max and update current max if it is greater than current max 
+
+Other similar problems:
+
+https://www.geeksforgeeks.org/count-maximum-number-of-cars-parked-at-the-same-time/
