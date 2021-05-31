@@ -1,4 +1,5 @@
 **Maximum sum subarray**
+
 Kadane's Algorithm is used to find maximum sum that can be obtained by summing up all the integers of contingious subaarray of the given array.
 
 Concept of Dynamic Programming is used to obtain solution for this as we make use of previous calculated results to get solution.
