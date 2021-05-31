@@ -1,1 +1,0 @@
-//Write a C++ program to find and print all unique elements of a given array of integers.
