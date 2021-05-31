@@ -111,7 +111,7 @@ int main(){
     
 
    
-    insert_at_pos(head,last,3,15);
+    insert_at_pos(head,last,4,15);
 
     display(head);
 
