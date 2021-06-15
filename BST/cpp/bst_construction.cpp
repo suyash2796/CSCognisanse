@@ -11,6 +11,7 @@ class BST {
 };
 
 // BST Functions in C++
+// BST Construction using Preorder Traversal
 
 // Util. function to create a node
 BST* new_node(int value) {
