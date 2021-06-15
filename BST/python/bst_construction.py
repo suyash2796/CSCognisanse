@@ -7,18 +7,19 @@ class BST:
         self.value = value
 
 # BST Functions in Python
+# BST Construction using Preorder Traversal
 
 # constructTreeHelper.Index is a static variable of it's corresponding function
  
-# Get the value of static variable
+# Get the value of index
 def getIndex():
     return constructTreeHelper.Index
  
-# Increment the value of static variable
+# Increment the value of index
 def incrementIndex():
     constructTreeHelper.Index += 1
  
-# A recurseive function to construct tree from arr[].
+# A recurseive helper function to construct tree from arr[].
 def constructTreeUtil(arr, low, high):
     # Base Case
     if(low > high):
