@@ -21,7 +21,7 @@ BST* new_node(int value) {
 }
  
 // A recursive helper function to construct tree from arr[].
-BST* helper_constructTree(int arr[], int* index, int low, int high, int size) {
+BST* constructTreeHelper(int arr[], int* index, int low, int high, int size) {
     // Base case
     if (*index >= size || low > high)
         return NULL;
@@ -43,8 +43,8 @@ BST* helper_constructTree(int arr[], int* index, int low, int high, int size) {
  
     // Use the index of element found in arr[] to divide
     // preorder array into left and right subtree
-    root->left = helper_constructTree(arr, index, *index, i - 1, size);
-    root->right = helper_constructTree(arr, index, i, high, size);
+    root->left = constructTreeHelper(arr, index, *index, i - 1, size);
+    root->right = constructTreeHelper(arr, index, i, high, size);
  
     return root;
 }
@@ -52,7 +52,7 @@ BST* helper_constructTree(int arr[], int* index, int low, int high, int size) {
 // The main function to construct BST from given preorder traversal
 BST* constructTree(int arr[], int size) {
     int index = 0;
-    return helper_constructTree(arr, &index, 0, size - 1, size);
+    return constructTreeHelper(arr, &index, 0, size - 1, size);
 }
  
 // A utility function to print inorder traversal of a Binary Tree
