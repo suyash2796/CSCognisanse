@@ -1,17 +1,11 @@
+// BST Functions in C++
+// BST Construction using Preorder Traversal
+
 #include<iostream>
 #include<vector>
 #include <bits/stdc++.h>
+#include "bst_construction.h"
 using namespace std;
-
-class BST {
-    public:
-        BST *left;
-        BST *right;
-        int value ;
-};
-
-// BST Functions in C++
-// BST Construction using Preorder Traversal
 
 // Util. function to create a node
 BST* new_node(int value) {
