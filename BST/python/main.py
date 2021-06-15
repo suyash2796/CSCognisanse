@@ -1,4 +1,4 @@
-from python.bst_construction import *
+from src.bst_construction import *
 
 arr = [24, 8, 3, 14, 34, 87, 45, 23, 76, 23, 2, 5, 8]
  
