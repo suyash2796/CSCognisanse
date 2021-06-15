@@ -7,7 +7,7 @@ class BST:
         self.value = value
 
 # BST Functions in Python
-# BST Construction using Preorder Traversal
+# BST Construction using Inorder Traversal
 
 # constructTreeHelper.Index is a static variable of it's corresponding function
  
