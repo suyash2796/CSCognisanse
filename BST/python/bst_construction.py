@@ -6,5 +6,65 @@ class BST:
         self.right = None
         self.value = value
 
-#TODO
-#construct BST
+# BST Functions in Python
+
+# constructTreeHelper.Index is a static variable of it's corresponding function
+ 
+# Get the value of static variable
+def getIndex():
+    return constructTreeHelper.Index
+ 
+# Increment the value of static variable
+def incrementIndex():
+    constructTreeHelper.Index += 1
+ 
+# A recurseive function to construct tree from arr[].
+def constructTreeUtil(arr, low, high):
+    # Base Case
+    if(low > high):
+        return None
+ 
+    # Make starting value in arr[] the root
+    # Then increment the index
+    root = BST(arr[getIndex()])
+    incrementIndex()
+ 
+    # Check to see if subarray has only one element
+    if low == high:
+        return root
+ 
+    temp_root = -1
+ 
+    # Search for the first element greater than root
+    for i in range(low, high+1):
+        if (arr[i] > root.value):
+            temp_root = i
+            break
+ 
+    # If no elements are greater than the current root,
+    # all elements are on left side of the root
+    if temp_root == -1:
+        temp_root = getIndex() + (high - low)
+ 
+    # Use the index of element found in arr[] to divide
+    # preorder array into left and right subtree
+    root.left = constructTreeHelper(arr, getIndex(), temp_root-1)
+ 
+    root.right = constructTreeHelper(arr, temp_root, high)
+ 
+    return root
+ 
+# The main function to construct BST from given preorder traversal
+def constructTree(arr):
+    size = len(arr)
+    constructTreeHelper.Index = 0
+    return constructTreeHelper(arr, 0, size-1)
+ 
+# A utility function to print inorder traversal of a Binary Tree
+def printInorder(root):
+    if root is None:
+        return
+    printInorder(root.left)
+    print root.value,
+    printInorder(root.right)
+    
