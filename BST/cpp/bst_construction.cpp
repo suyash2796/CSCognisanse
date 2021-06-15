@@ -1,5 +1,5 @@
 // BST Functions in C++
-// BST Construction using Preorder Traversal
+// BST Construction using Inorder Traversal
 
 #include<iostream>
 #include<vector>
