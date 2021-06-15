@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    int arr[] = { 10, 5, 1, 7, 40, 50 };
+    int arr[] = { 24, 8, 3, 14, 34, 87, 45, 23, 76, 23, 2, 5, 8 };
     int size = sizeof(arr) / sizeof(arr[0]);
  
     BST* root = constructTree(arr, size);
