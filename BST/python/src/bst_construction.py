@@ -10,7 +10,7 @@ class BST:
 # BST Construction using Inorder Traversal
 
 # constructTreeHelper.Index is a static variable of it's corresponding function
- 
+index = 0
 # Get the value of index
 def getIndex():
     return constructTreeHelper.Index
@@ -20,7 +20,7 @@ def incrementIndex():
     constructTreeHelper.Index += 1
  
 # A recurseive helper function to construct tree from arr[].
-def constructTreeUtil(arr, low, high):
+def constructTreeHelper(arr, low, high):
     # Base Case
     if(low > high):
         return None
@@ -66,5 +66,5 @@ def printInorder(root):
     if root is None:
         return
     printInorder(root.left)
-    print root.value,
+    print (root.value, end=" ")
     printInorder(root.right)
