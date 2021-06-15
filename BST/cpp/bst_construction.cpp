@@ -10,7 +10,7 @@ class BST {
         int value ;
 };
 
-// BST Functions for C++
+// BST Functions in C++
 
 // Util. function to create a node
 BST* new_node(int value) {
