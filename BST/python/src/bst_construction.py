@@ -10,7 +10,7 @@ class BST:
 # BST Construction using Inorder Traversal
 
 # constructTreeHelper.Index is a static variable of it's corresponding function
-index = 0
+
 # Get the value of index
 def getIndex():
     return constructTreeHelper.Index
